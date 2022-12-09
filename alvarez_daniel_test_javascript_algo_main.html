@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Intro page-->
+    <head>
+        <title>JavaScript test</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="author" content="Daniel Alvarez">
+    </head>
+    <body>
+    </body>
+</html>
+    <script type="text/javascript" src="javascript_test_je1.js"></script>
+    <script type="text/javascript" src="alvarez_daniel_test_javascript_algo_ex1.js"> </script>
+    <script type="text/javascript" src="alvarez_daniel_test_javascript_algo_ex2.js"> </script>
+    <script type="text/javascript" src="alvarez_daniel_test_javascript_algo_ex3.js"> </script>
+
+    <script>
+
+        //EX1---------------------------------------------------------
+        //Call to F11
+        let to_verify = ConvertArray(array_number);
+        //Call to F12
+        DisplayArray(to_verify);
+        //-------------------------------------------------------------
+
+        //Creates the table for the anomalies
+        createAnomalyTable();
+
+        //EX3---------------------------------------------------------
+        //Call to F31
+        CheckingRows(to_verify);
+        //Call to F32
+        CheckingColumns(to_verify);
+        //Call to F33
+        CheckingRegions(to_verify);
+        //-------------------------------------------------------------
+        
+        //Gets the HTML anomaly table createAnomalyTable() made;
+        const tblBody = document.getElementById("anomalies");
+        //We check if the table has child rows. No rows = no anomalies
+        if (!tblBody.hasChildNodes()) {
+            //if there isn't anomalies, we display the table correct message
+            // creates a table row
+            const row = document.createElement("tr");
+            //creates the message element
+            const cell = document.createElement("td");
+            const cellText = document.createTextNode("The table is correct");
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            tblBody.appendChild(row);
+        }
+        </script>
